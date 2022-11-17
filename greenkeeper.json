@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "docs/package.json",
+        "apps/example/package.json",
+        "apps/bd-chat/package.json",
+        "apps/bd-chat-app/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
