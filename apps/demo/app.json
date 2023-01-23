@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "Demo",
+    "description": "demo",
+    "slug": "demo",
+    "privacy": "public",
+    "version": "2.0.0",
+    "orientation": "default",
+    "primaryColor": "#6200EE",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/images/paper-icon.png",
+    "packagerOpts": {
+      "config": "./metro.config.js",
+      "projectRoots": ""
+    },
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "owner": "react-native-paper",
+    "ios": {
+      "bundleIdentifier": "com.callstack.dev",
+      "buildNumber": "4.0.0"
+    },
+    "android": {
+      "package": "com.callstack.dev",
+      "versionCode": 6,
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "icon": "./assets/images/paper-icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/android-icon.png",
+        "backgroundColor": "#6200EE"
+      }
+    },
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "backgroundColor": "#6200EE",
+      "resizeMode": "cover"
+    },
+    "plugins": [
+      [
+        "expo-community-flipper",
+        {
+          "ios": {
+            "enabled": true,
+            "stripUseFrameworks": true
+          },
+          "android": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
+  }
+}

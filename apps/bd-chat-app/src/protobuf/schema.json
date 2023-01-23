@@ -1,0 +1,3418 @@
+{
+  "msgFiles": {
+    "PTPAuth": {
+      "fileNamespace": [
+        "PTP",
+        "Auth"
+      ],
+      "includeFiles": [
+        "PTPCommon"
+      ],
+      "msgs": [
+        {
+          "fields": [
+            {
+              "name": "need_sign",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "boolean",
+              "defaultValue": false
+            }
+          ],
+          "name": "AuthCaptchaReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "captcha",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "address",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "iv",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "aad",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "sign",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            }
+          ],
+          "name": "AuthCaptchaRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "address",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "captcha",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "client_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ClientType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ClientType",
+                "defaultValue": "PTPCommon.ClientType.CLIENT_TYPE_WEB",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "client_version",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "sign",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            }
+          ],
+          "name": "AuthLoginReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "user_info",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "PTPCommon.UserInfo_Type",
+              "defaultValue": "''",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.UserInfo",
+                "defaultValue": "{}",
+                "isEnum": false
+              }
+            }
+          ],
+          "name": "AuthLoginRes"
+        },
+        {
+          "fields": [],
+          "name": "AuthLogoutReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            }
+          ],
+          "name": "AuthLogoutRes"
+        }
+      ]
+    },
+    "PTPBuddy": {
+      "fileNamespace": [
+        "PTP",
+        "Buddy"
+      ],
+      "includeFiles": [
+        "PTPCommon"
+      ],
+      "msgs": [
+        {
+          "fields": [
+            {
+              "name": "buddy_updated_time",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyGetALLReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "buddy_updated_time",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "buddy_list",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.UserInfo_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.UserInfo",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyGetALLRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "user_ids",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyGetListReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "buddy_list",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.UserInfo_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.UserInfo",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyGetListRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "user_ids",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyGetStatReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "user_stat_list",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.UserStat[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.UserStat",
+                "defaultValue": "[PTPCommon.UserStat.undefined]",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyGetStatRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "buddy_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.BuddyModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.BuddyModifyAction",
+                "defaultValue": "PTPCommon.BuddyModifyAction.BuddyModifyAction_nickname",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "value",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            }
+          ],
+          "name": "BuddyModifyNotify"
+        },
+        {
+          "fields": [
+            {
+              "name": "buddy_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.BuddyModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.BuddyModifyAction",
+                "defaultValue": "PTPCommon.BuddyModifyAction.BuddyModifyAction_nickname",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "value",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyModifyReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "buddy_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.BuddyModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.BuddyModifyAction",
+                "defaultValue": "PTPCommon.BuddyModifyAction.BuddyModifyAction_nickname",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "value",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "notify_pairs",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyModifyRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "pair_uid_list",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "BuddyModifyUpdatePair"
+        },
+        {
+          "fields": [
+            {
+              "name": "user_stat",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.UserStat",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.UserStat",
+                "defaultValue": "PTPCommon.UserStat.USER_STAT_ONLINE",
+                "isEnum": true
+              }
+            }
+          ],
+          "name": "BuddyStatNotify"
+        }
+      ]
+    },
+    "PTPCommon": {
+      "fileNamespace": [
+        "PTP",
+        "Common"
+      ],
+      "includeFiles": [],
+      "msgs": [
+        {
+          "fields": [
+            {
+              "name": "client_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "ClientType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ClientType",
+                "defaultValue": "PTPCommon.ClientType.CLIENT_TYPE_WEB",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "client_version",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "login_time",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "browser_name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "browser_version",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "os_name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "os_version",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "is_intel",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "boolean",
+              "defaultValue": false
+            },
+            {
+              "name": "uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "client_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            }
+          ],
+          "name": "DevicesInfo"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_adr",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "avatar",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "owner_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "pair_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "group_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "GroupType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupType",
+                "defaultValue": "PTPCommon.GroupType.GROUP_TYPE_PAIR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "group_idx",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "created_time",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupInfo"
+        },
+        {
+          "fields": [
+            {
+              "name": "uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "member_status",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "GroupMemberStatus",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupMemberStatus",
+                "defaultValue": "PTPCommon.GroupMemberStatus.GROUP_MEMBER_STATUS_NORMAL",
+                "isEnum": true
+              }
+            }
+          ],
+          "name": "GroupMember"
+        },
+        {
+          "fields": [
+            {
+              "name": "name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "avatar",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "group_adr",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "group_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "GroupType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupType",
+                "defaultValue": "PTPCommon.GroupType.GROUP_TYPE_PAIR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "pair_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "owner_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "unReadCnt",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "lastMsgId",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msgUpTime",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "memberUpTime",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupRecord"
+        },
+        {
+          "fields": [
+            {
+              "name": "ip",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "port",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "IpAddress"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "from_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "sent_at",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "MsgType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.MsgType",
+                "defaultValue": "PTPCommon.MsgType.MSG_TYPE_TEXT",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "msg_data",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            }
+          ],
+          "name": "MsgInfo"
+        },
+        {
+          "fields": [
+            {
+              "name": "msg_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "from_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "sent_at",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "MsgType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.MsgType",
+                "defaultValue": "PTPCommon.MsgType.MSG_TYPE_TEXT",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "msg_data",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            }
+          ],
+          "name": "MsgInfoList"
+        },
+        {
+          "fields": [
+            {
+              "name": "address",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "pub_key",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "avatar",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "status",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "user_name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "nick_name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "sign_info",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "UserInfo"
+        },
+        {
+          "fields": [
+            {
+              "name": "uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "status",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "UserStat",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.UserStat",
+                "defaultValue": "PTPCommon.UserStat.USER_STAT_ONLINE",
+                "isEnum": true
+              }
+            }
+          ],
+          "name": "UserStatInfo"
+        }
+      ]
+    },
+    "PTPFile": {
+      "fileNamespace": [
+        "PTP",
+        "File"
+      ],
+      "includeFiles": [
+        "PTPCommon"
+      ],
+      "msgs": [
+        {
+          "fields": [
+            {
+              "name": "width",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "height",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "file_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "file_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "file_group",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "FileImgUploadReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "file_path",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "FileImgUploadRes"
+        }
+      ]
+    },
+    "PTPGroup": {
+      "fileNamespace": [
+        "PTP",
+        "Group"
+      ],
+      "includeFiles": [
+        "PTPCommon"
+      ],
+      "msgs": [
+        {
+          "fields": [
+            {
+              "name": "group_member_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.GroupMemberModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupMemberModifyAction",
+                "defaultValue": "PTPCommon.GroupMemberModifyAction.GroupMemberModifyAction_DEL",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "members_chang",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "string[]",
+              "defaultValue": "[]"
+            }
+          ],
+          "name": "GroupChangeMemberNotify"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_member_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.GroupMemberModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupMemberModifyAction",
+                "defaultValue": "PTPCommon.GroupMemberModifyAction.GroupMemberModifyAction_DEL",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "members",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "string[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupChangeMemberReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_member_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.GroupMemberModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupMemberModifyAction",
+                "defaultValue": "PTPCommon.GroupMemberModifyAction.GroupMemberModifyAction_DEL",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "members_chang",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "string[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupChangeMemberRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_idx",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "sign",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "captcha",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "group_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.GroupType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupType",
+                "defaultValue": "PTPCommon.GroupType.GROUP_TYPE_PAIR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "avatar",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "members",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupCreateReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "PTPCommon.GroupInfo_Type",
+              "defaultValue": "''",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupInfo",
+                "defaultValue": "{}",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "group_members",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.GroupMember_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupMember",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupCreateRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_info_updated_time",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupGetListReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_info_updated_time",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "groups",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.GroupInfo_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupInfo",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupGetListRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_members_updated_time",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupGetMembersListReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_members_updated_time",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "members",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.UserInfo_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.UserInfo",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "group_members",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.GroupMember_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupMember",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupGetMembersListRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.GroupModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupModifyAction",
+                "defaultValue": "PTPCommon.GroupModifyAction.GroupModifyAction_name",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "value",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            }
+          ],
+          "name": "GroupModifyNotify"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.GroupModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupModifyAction",
+                "defaultValue": "PTPCommon.GroupModifyAction.GroupModifyAction_name",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "value",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupModifyReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_modify_action",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.GroupModifyAction",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupModifyAction",
+                "defaultValue": "PTPCommon.GroupModifyAction.GroupModifyAction_name",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "value",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "notify_members",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupModifyRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.GroupType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.GroupType",
+                "defaultValue": "PTPCommon.GroupType.GROUP_TYPE_PAIR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "members",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupPreCreateReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_adr",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "group_idx",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupPreCreateRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "from_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupRemoveSessionNotify"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupRemoveSessionReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupRemoveSessionRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupUnreadMsgReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "unread_list",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.MsgInfo_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.MsgInfo",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "unread_cnt",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "GroupUnreadMsgRes"
+        }
+      ]
+    },
+    "PTPMsg": {
+      "fileNamespace": [
+        "PTP",
+        "Msg"
+      ],
+      "includeFiles": [
+        "PTPCommon"
+      ],
+      "msgs": [
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_ids",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgGetByIdsReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_list",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.MsgInfo_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.MsgInfo",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgGetByIdsRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgGetMaxIdReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgGetMaxIdRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "msg_info",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.MsgInfo_Type",
+              "defaultValue": "''",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.MsgInfo",
+                "defaultValue": "{}",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "notify_users",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgNotify"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgReadAckReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "from_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "notify_users",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "msg_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgReadNotify"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_adr",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "sent_at",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.MsgType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.MsgType",
+                "defaultValue": "PTPCommon.MsgType.MSG_TYPE_TEXT",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "msg_data",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "msg_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "sent_at",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "auth_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgRes"
+        },
+        {
+          "fields": [
+            {
+              "name": "un_notify_users",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "number[]",
+              "defaultValue": "[]"
+            },
+            {
+              "name": "sent_at",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "group_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            },
+            {
+              "name": "from_uid",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "number",
+              "defaultValue": 0
+            }
+          ],
+          "name": "MsgUnNotify"
+        }
+      ]
+    },
+    "PTPOther": {
+      "fileNamespace": [
+        "PTP",
+        "Other"
+      ],
+      "includeFiles": [],
+      "msgs": [
+        {
+          "fields": [],
+          "name": "HeartBeatNotify"
+        }
+      ]
+    },
+    "PTPServer": {
+      "fileNamespace": [
+        "PTP",
+        "Server"
+      ],
+      "includeFiles": [
+        "PTPCommon"
+      ],
+      "msgs": [
+        {
+          "fields": [
+            {
+              "name": "address",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "captcha",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "sign",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            }
+          ],
+          "name": "ServerLoginReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            },
+            {
+              "name": "user_info",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "PTPCommon.UserInfo_Type",
+              "defaultValue": "''",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.UserInfo",
+                "defaultValue": "{}",
+                "isEnum": false
+              }
+            },
+            {
+              "name": "attach_data",
+              "isMap": false,
+              "isBytes": true,
+              "isRepeated": false,
+              "isRequired": false,
+              "fieldType": "Buffer",
+              "defaultValue": "Buffer.alloc(0)"
+            }
+          ],
+          "name": "ServerLoginRes"
+        }
+      ]
+    },
+    "PTPSwitch": {
+      "fileNamespace": [
+        "PTP",
+        "Switch"
+      ],
+      "includeFiles": [
+        "PTPCommon"
+      ],
+      "msgs": [
+        {
+          "fields": [
+            {
+              "name": "devices",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": true,
+              "isRequired": false,
+              "fieldType": "PTPCommon.DevicesInfo_Type[]",
+              "defaultValue": "[]",
+              "namespaceType": {
+                "resolvedType": "PTPCommon.DevicesInfo",
+                "defaultValue": "[]",
+                "isEnum": false
+              }
+            }
+          ],
+          "name": "SwitchDevicesNotify"
+        },
+        {
+          "fields": [
+            {
+              "name": "browser_name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "browser_version",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "os_name",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "os_version",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "is_intel",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "boolean",
+              "defaultValue": false
+            },
+            {
+              "name": "client_id",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            }
+          ],
+          "name": "SwitchDevicesReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "from_adr",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "data",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "switch_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.SwitchType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.SwitchType",
+                "defaultValue": "PTPCommon.SwitchType.SwitchType_Apply",
+                "isEnum": true
+              }
+            }
+          ],
+          "name": "SwitchPtpNotify"
+        },
+        {
+          "fields": [
+            {
+              "name": "to_adr",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "data",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "string",
+              "defaultValue": "''"
+            },
+            {
+              "name": "switch_type",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.SwitchType",
+              "defaultValue": 1,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.SwitchType",
+                "defaultValue": "PTPCommon.SwitchType.SwitchType_Apply",
+                "isEnum": true
+              }
+            }
+          ],
+          "name": "SwitchPtpReq"
+        },
+        {
+          "fields": [
+            {
+              "name": "error",
+              "isMap": false,
+              "isBytes": false,
+              "isRepeated": false,
+              "isRequired": true,
+              "fieldType": "PTPCommon.ERR",
+              "defaultValue": 0,
+              "namespaceType": {
+                "resolvedType": "PTPCommon.ERR",
+                "defaultValue": "PTPCommon.ERR.NO_ERROR",
+                "isEnum": true
+              }
+            }
+          ],
+          "name": "SwitchPtpRes"
+        }
+      ]
+    }
+  },
+  "enumFiles": {
+    "PTPAuth": [],
+    "PTPBuddy": [],
+    "PTPCommon": [
+      {
+        "name": "BuddyModifyAction",
+        "values": {
+          "BuddyModifyAction_nickname": 1,
+          "BuddyModifyAction_avatar": 2,
+          "BuddyModifyAction_sign_info": 3,
+          "BuddyModifyAction_user_name": 4
+        }
+      },
+      {
+        "name": "CID_AUTH",
+        "values": {
+          "CID_AuthLoginReq": 257,
+          "CID_AuthLoginRes": 258,
+          "CID_AuthLogoutReq": 259,
+          "CID_AuthLogoutRes": 260,
+          "CID_AuthCaptchaReq": 261,
+          "CID_AuthCaptchaRes": 262
+        }
+      },
+      {
+        "name": "CID_BUDDY",
+        "values": {
+          "CID_BuddyStatNotify": 513,
+          "CID_BuddyGetListReq": 514,
+          "CID_BuddyGetListRes": 515,
+          "CID_BuddyGetALLReq": 516,
+          "CID_BuddyGetALLRes": 517,
+          "CID_BuddyGetStatReq": 518,
+          "CID_BuddyGetStatRes": 519,
+          "CID_BuddyModifyReq": 520,
+          "CID_BuddyModifyRes": 521,
+          "CID_BuddyModifyNotify": 522,
+          "CID_BuddyModifyUpdatePair": 523
+        }
+      },
+      {
+        "name": "CID_FILE",
+        "values": {
+          "CID_FileImgUploadReq": 1281,
+          "CID_FileImgUploadRes": 1282
+        }
+      },
+      {
+        "name": "CID_GROUP",
+        "values": {
+          "CID_GroupPreCreateReq": 1025,
+          "CID_GroupPreCreateRes": 1026,
+          "CID_GroupCreateReq": 1027,
+          "CID_GroupCreateRes": 1028,
+          "CID_GroupModifyReq": 1029,
+          "CID_GroupModifyRes": 1030,
+          "CID_GroupModifyNotify": 1031,
+          "CID_GroupChangeMemberReq": 1032,
+          "CID_GroupChangeMemberRes": 1033,
+          "CID_GroupChangeMemberNotify": 1034,
+          "CID_GroupGetListReq": 1035,
+          "CID_GroupGetListRes": 1036,
+          "CID_GroupUnreadMsgReq": 1037,
+          "CID_GroupUnreadMsgRes": 1038,
+          "CID_GroupRemoveSessionReq": 1039,
+          "CID_GroupRemoveSessionRes": 1041,
+          "CID_GroupRemoveSessionNotify": 1042,
+          "CID_GroupGetMembersListReq": 1043,
+          "CID_GroupGetMembersListRes": 1044
+        }
+      },
+      {
+        "name": "CID_MSG",
+        "values": {
+          "CID_MsgReq": 769,
+          "CID_MsgRes": 770,
+          "CID_MsgReadAckReq": 771,
+          "CID_MsgReadNotify": 772,
+          "CID_MsgGetMaxIdReq": 773,
+          "CID_MsgGetMaxIdRes": 774,
+          "CID_MsgGetByIdsReq": 775,
+          "CID_MsgGetByIdsRes": 776,
+          "CID_MsgNotify": 777,
+          "CID_MsgUnNotify": 778
+        }
+      },
+      {
+        "name": "CID_OTHER",
+        "values": {
+          "CID_HeartBeatNotify": 1793
+        }
+      },
+      {
+        "name": "CID_SERVER",
+        "values": {
+          "CID_ServerLoginReq": 1537,
+          "CID_ServerLoginRes": 1538
+        }
+      },
+      {
+        "name": "CID_SWITCH",
+        "values": {
+          "CID_SwitchPtpReq": 2049,
+          "CID_SwitchPtpRes": 2050,
+          "CID_SwitchPtpNotify": 2051,
+          "CID_SwitchDevicesReq": 2052,
+          "CID_SwitchDevicesNotify": 2053
+        }
+      },
+      {
+        "name": "ClientType",
+        "values": {
+          "CLIENT_TYPE_WEB": 1,
+          "CLIENT_TYPE_PC": 2,
+          "CLIENT_TYPE_MAC": 3,
+          "CLIENT_TYPE_IOS": 17,
+          "CLIENT_TYPE_ANDROID": 18
+        }
+      },
+      {
+        "name": "ERR",
+        "values": {
+          "NO_ERROR": 0,
+          "E_SYSTEM": 1,
+          "E_GROUP_CREATE_PAIR_GROUP_MEMBER_SIE_INVALID": 2,
+          "E_GROUP_CREATE_PAIR_GROUP_NO_REG_USER": 3,
+          "E_GROUP_HAS_CREATED": 4,
+          "E_REASON_NO_ROUTE_SERVER": 5,
+          "E_REASON_NO_LOGIN_SERVER": 6,
+          "E_REASON_NO_DB_SERVER": 7,
+          "E_LOGIN_ERROR": 8,
+          "E_PB_PARSE_ERROR": 9,
+          "E_SWITCH_USER_NO_ONLINE": 10,
+          "E_USERNAME_EXISTS": 11
+        }
+      },
+      {
+        "name": "GroupMemberModifyAction",
+        "values": {
+          "GroupMemberModifyAction_DEL": 1,
+          "GroupMemberModifyAction_ADD": 2
+        }
+      },
+      {
+        "name": "GroupMemberStatus",
+        "values": {
+          "GROUP_MEMBER_STATUS_NORMAL": 1
+        }
+      },
+      {
+        "name": "GroupModifyAction",
+        "values": {
+          "GroupModifyAction_name": 1,
+          "GroupModifyAction_avatar": 2
+        }
+      },
+      {
+        "name": "GroupType",
+        "values": {
+          "GROUP_TYPE_PAIR": 1,
+          "GROUP_TYPE_MULTI": 2
+        }
+      },
+      {
+        "name": "MsgType",
+        "values": {
+          "MSG_TYPE_TEXT": 1,
+          "MSG_TYPE_AUDIO": 2
+        }
+      },
+      {
+        "name": "QRCODE_TYPE",
+        "values": {
+          "QRCODE_TYPE_MNEMONIC_SHARE": 1,
+          "QRCODE_TYPE_NAME_CARD": 2
+        }
+      },
+      {
+        "name": "SessionStat",
+        "values": {
+          "SESSION_STAT_OK": 0,
+          "SESSION_STAT_DELETE": 1
+        }
+      },
+      {
+        "name": "ShieldStatus",
+        "values": {
+          "SHIELD_STATUS_OK": 0,
+          "SHIELD_STATUS_DELETE": 1
+        }
+      },
+      {
+        "name": "SID",
+        "values": {
+          "S_AUTH": 1,
+          "S_BUDDY": 2,
+          "S_MSG": 3,
+          "S_GROUP": 4,
+          "S_FILE": 5,
+          "S_SERVER": 6,
+          "S_OTHER": 7,
+          "S_SWITCH": 8
+        }
+      },
+      {
+        "name": "SwitchType",
+        "values": {
+          "SwitchType_Apply": 1,
+          "SwitchType_Offer": 2,
+          "SwitchType_Answer": 3,
+          "SwitchType_Candidate": 4,
+          "SwitchType_Ready": 5,
+          "SwitchType_Bye": 6
+        }
+      },
+      {
+        "name": "UserStat",
+        "values": {
+          "USER_STAT_ONLINE": 1,
+          "USER_STAT_OFFLINE": 2,
+          "USER_STAT_LEAVE": 3
+        }
+      }
+    ],
+    "PTPFile": [],
+    "PTPGroup": [],
+    "PTPMsg": [],
+    "PTPOther": [],
+    "PTPServer": [],
+    "PTPSwitch": []
+  }
+}

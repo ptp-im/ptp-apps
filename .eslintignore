@@ -10,3 +10,4 @@ lib/
 
 # babel files
 src/babel
+src/app/protobuf/protobuf.js

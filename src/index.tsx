@@ -8,6 +8,8 @@ export {
   createDynamicThemeColors,
 } from './core/theming';
 
+export { isWeb, isIOS, isADR } from './utils';
+
 export * from './styles/themes';
 
 export { default as Provider } from './core/Provider';
@@ -29,6 +31,7 @@ export { default as Badge } from './components/Badge';
 export { default as ActivityIndicator } from './components/ActivityIndicator';
 export { default as Banner } from './components/Banner';
 export { default as BottomNavigation } from './components/BottomNavigation/BottomNavigation';
+export { default as BottomTabs } from './components/BottomTabs/BottomTabs';
 export { default as Button } from './components/Button/Button';
 export { default as Card } from './components/Card/Card';
 export { default as Checkbox } from './components/Checkbox';
@@ -77,6 +80,10 @@ export type { Props as AvatarImageProps } from './components/Avatar/AvatarImage'
 export type { Props as AvatarTextProps } from './components/Avatar/AvatarText';
 export type { Props as BadgeProps } from './components/Badge';
 export type { Props as BannerProps } from './components/Banner';
+export type {
+  Props as BottomTabsProps,
+  Route as BottomTabsRoute,
+} from './components/BottomTabs/BottomTabs';
 export type { Props as BottomNavigationProps } from './components/BottomNavigation/BottomNavigation';
 export type { Props as ButtonProps } from './components/Button/Button';
 export type { Props as CardProps } from './components/Card/Card';

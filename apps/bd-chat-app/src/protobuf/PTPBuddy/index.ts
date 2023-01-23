@@ -1,0 +1,11 @@
+export { default as BuddyGetALLReq } from './BuddyGetALLReq';
+export { default as BuddyGetALLRes } from './BuddyGetALLRes';
+export { default as BuddyGetListReq } from './BuddyGetListReq';
+export { default as BuddyGetListRes } from './BuddyGetListRes';
+export { default as BuddyGetStatReq } from './BuddyGetStatReq';
+export { default as BuddyGetStatRes } from './BuddyGetStatRes';
+export { default as BuddyModifyNotify } from './BuddyModifyNotify';
+export { default as BuddyModifyReq } from './BuddyModifyReq';
+export { default as BuddyModifyRes } from './BuddyModifyRes';
+export { default as BuddyModifyUpdatePair } from './BuddyModifyUpdatePair';
+export { default as BuddyStatNotify } from './BuddyStatNotify';

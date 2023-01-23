@@ -24,6 +24,6 @@
     "strict": true,
     "target": "esnext"
   },
-  "exclude": ["lib/**/*","apps/example", "apps/bd-chat-app"]
+  "exclude": ["lib/**/*","apps/demo","apps/dev", "apps/bd-chat-app"]
 
 }

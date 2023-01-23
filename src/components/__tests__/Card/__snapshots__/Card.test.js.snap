@@ -1,91 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card renders an outlined card 1`] = `
-<View
-  collapsable={false}
+<div
+  className="css-view-175oi2r"
+  dir={null}
   style={
     Object {
-      "alignSelf": undefined,
-      "bottom": undefined,
-      "left": undefined,
-      "position": undefined,
-      "right": undefined,
-      "shadowColor": "#000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
-      "shadowOpacity": 0,
-      "shadowRadius": 0,
-      "top": undefined,
+      "backgroundColor": "rgba(255,251,254,1.00)",
+      "borderBottomLeftRadius": "4px",
+      "borderBottomRightRadius": "4px",
+      "borderTopLeftRadius": "4px",
+      "borderTopRightRadius": "4px",
     }
   }
 >
-  <View
-    collapsable={false}
+  <div
+    className="css-view-175oi2r r-borderWidth-rs99b7 r-height-1pi2tsx r-position-u8s1d r-width-13qz1uu r-zIndex-136ojw6 r-pointerEvents-633pao"
+    dir={null}
     style={
       Object {
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
-        "shadowOpacity": 0,
-        "shadowRadius": 0,
+        "borderBottomColor": "rgba(121,116,126,1.00)",
+        "borderBottomLeftRadius": "4px",
+        "borderBottomRightRadius": "4px",
+        "borderLeftColor": "rgba(121,116,126,1.00)",
+        "borderRightColor": "rgba(121,116,126,1.00)",
+        "borderTopColor": "rgba(121,116,126,1.00)",
+        "borderTopLeftRadius": "4px",
+        "borderTopRightRadius": "4px",
       }
     }
-  >
-    <View
-      collapsable={false}
-      style={
-        Object {
-          "backgroundColor": "rgba(255, 251, 254, 1)",
-          "borderRadius": 4,
-          "elevation": 1,
-        }
-      }
-    >
-      <View
-        pointerEvents="none"
-        style={
-          Array [
-            Object {
-              "borderColor": "rgba(121, 116, 126, 1)",
-              "borderRadius": 4,
-            },
-            Object {
-              "borderWidth": 1,
-              "height": "100%",
-              "position": "absolute",
-              "width": "100%",
-              "zIndex": 2,
-            },
-          ]
-        }
-      />
-      <View
-        accessibilityState={
-          Object {
-            "disabled": true,
-          }
-        }
-        accessible={true}
-        focusable={false}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "flexGrow": 1,
-            "flexShrink": 1,
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
+  />
+  <div
+    aria-disabled={true}
+    className="css-view-175oi2r r-flexGrow-16y2uox r-flexShrink-1wbh5a2"
+    dir={null}
+    onClick={[Function]}
+    onContextMenu={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="-1"
+  />
+</div>
 `;
